@@ -1,0 +1,1019 @@
+/* =========================================
+   CATIE CAKE PARLOUR
+   MAIN STYLES
+========================================= */
+
+:root {
+    --black: #080808;
+    --dark: #111111;
+    --dark-card: #181818;
+
+    --pink: #e89bb8;
+    --pink-light: #f4bfd1;
+
+    --blue: #55d9ff;
+    --blue-dark: #179ac0;
+
+    --white: #ffffff;
+    --gray: #bdbdbd;
+    --gray-dark: #777777;
+
+    --border: rgba(232, 155, 184, 0.25);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: var(--black);
+    color: var(--white);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   WATERMARK
+========================================= */
+
+.watermark {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) rotate(-15deg);
+
+    font-size: clamp(100px, 22vw, 330px);
+
+    font-weight: 900;
+
+    letter-spacing: 15px;
+
+    color: rgba(232, 155, 184, 0.025);
+
+    pointer-events: none;
+
+    white-space: nowrap;
+
+    z-index: -1;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 6%;
+
+    background: rgba(8, 8, 8, 0.94);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.logo {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+
+.logo span {
+    font-size: 25px;
+
+    font-weight: 900;
+
+    color: var(--pink);
+
+    letter-spacing: 3px;
+}
+
+
+.logo small {
+    margin-top: 5px;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    color: var(--blue);
+}
+
+
+.navbar nav {
+    display: flex;
+
+    gap: 28px;
+}
+
+
+.navbar nav a {
+    color: var(--gray);
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.navbar nav a:hover {
+    color: var(--pink);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 6%;
+
+    position: relative;
+}
+
+
+.hero-content {
+    max-width: 850px;
+}
+
+
+.eyebrow {
+    color: var(--blue);
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 120px);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    color: var(--pink);
+}
+
+
+.hero-text {
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    color: var(--gray);
+
+    font-size: 18px;
+}
+
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+    border: none;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    background: var(--pink);
+
+    color: var(--black);
+
+    padding: 14px 25px;
+
+    border-radius: 8px;
+
+    font-weight: 800;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+    text-align: center;
+}
+
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(232, 155, 184, 0.25);
+}
+
+
+.btn-outline {
+    background: transparent;
+
+    color: var(--pink);
+
+    border: 1px solid var(--pink);
+}
+
+
+.btn-outline:hover {
+    background: var(--pink);
+
+    color: var(--black);
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+    padding: 100px 6%;
+
+    max-width: 1400px;
+
+    margin: auto;
+}
+
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 65px);
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+}
+
+
+.section-heading p:not(.eyebrow) {
+    color: var(--gray);
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+    text-align: center;
+}
+
+
+.about-content {
+    max-width: 750px;
+
+    margin: auto;
+
+    color: var(--gray);
+
+    font-size: 18px;
+}
+
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+
+.about strong {
+    color: var(--pink);
+}
+
+
+/* =========================================
+   CAKE MENU
+========================================= */
+
+.cake-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(270px, 1fr));
+
+    gap: 20px;
+}
+
+
+.cake-card {
+    background: var(--dark-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    transition: 0.3s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.cake-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--pink),
+            var(--blue)
+        );
+}
+
+
+.cake-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--pink);
+}
+
+
+.cake-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 20px;
+
+    color: var(--pink);
+}
+
+
+.price-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+
+    color: var(--gray);
+}
+
+
+.price-row strong {
+    color: var(--white);
+}
+
+
+/* =========================================
+   FROSTING
+========================================= */
+
+.frosting-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 15px;
+}
+
+
+.frosting-card {
+    background: var(--dark-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+
+.frosting-card:hover {
+    border-color: var(--blue);
+
+    transform: translateY(-4px);
+}
+
+
+.frosting-card span {
+    font-size: 30px;
+
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+
+.frosting-card h3 {
+    font-size: 15px;
+}
+
+
+.extra-price {
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: var(--gray);
+}
+
+
+.extra-price strong {
+    color: var(--blue);
+}
+
+
+/* =========================================
+   TREATS
+========================================= */
+
+.treats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+
+.treat-card {
+    background: var(--dark-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    transition: 0.3s;
+}
+
+
+.treat-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--pink);
+}
+
+
+.treat-icon {
+    font-size: 40px;
+}
+
+
+.treat-card h3 {
+    color: var(--pink);
+
+    font-size: 22px;
+}
+
+
+.treat-card p {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+.treat-card strong {
+    font-size: 20px;
+
+    color: var(--blue);
+
+    margin-bottom: 5px;
+}
+
+
+.orderable-card select {
+    width: 100%;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   FORMS
+========================================= */
+
+.customizer,
+.order-wrapper {
+    max-width: 750px;
+
+    margin: auto;
+
+    background: var(--dark-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 35px;
+}
+
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+
+.form-group label,
+.orderable-card label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--white);
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    background: #0c0c0c;
+
+    color: var(--white);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--pink);
+
+    box-shadow:
+        0 0 0 2px rgba(232, 155, 184, 0.08);
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+.calculate-btn {
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+
+.price-result {
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background: rgba(85, 217, 255, 0.07);
+
+    border: 1px solid rgba(85, 217, 255, 0.25);
+
+    color: var(--blue);
+
+    text-align: center;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+#addCakeToOrderBtn {
+    width: 100%;
+
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   ORDER STATUS
+========================================= */
+
+.order-status {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    display: none;
+
+    text-align: center;
+}
+
+
+.order-status.loading {
+    display: block;
+
+    background: rgba(85, 217, 255, 0.08);
+
+    color: var(--blue);
+}
+
+
+.order-status.error {
+    display: block;
+
+    background: rgba(255, 70, 70, 0.1);
+
+    color: #ff7777;
+}
+
+
+/* =========================================
+   ORDER CONFIRMATION
+========================================= */
+
+.order-confirmation {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(232, 155, 184, 0.1),
+            rgba(85, 217, 255, 0.06)
+        );
+
+    border: 1px solid var(--pink);
+
+    border-radius: 15px;
+}
+
+
+.order-confirmation.show {
+    display: block;
+
+    animation: confirmationAppear 0.5s ease;
+}
+
+
+.success-icon {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: auto auto 15px;
+
+    border-radius: 50%;
+
+    background: var(--pink);
+
+    color: var(--black);
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+
+.order-confirmation h3 {
+    color: var(--pink);
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.order-confirmation p {
+    color: var(--gray);
+}
+
+
+#orderNumber {
+    display: block;
+
+    margin-top: 15px;
+
+    color: var(--blue);
+}
+
+
+@keyframes confirmationAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+
+.contact-card {
+    text-align: center;
+
+    background: var(--dark-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 30px;
+}
+
+
+.contact-card span {
+    font-size: 30px;
+}
+
+
+.contact-card h3 {
+    color: var(--pink);
+
+    margin: 10px 0;
+}
+
+
+.contact-card p {
+    color: var(--gray);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    border-top: 1px solid var(--border);
+
+    padding: 50px 6%;
+
+    text-align: center;
+
+    background: #050505;
+}
+
+
+.footer-logo {
+    color: var(--pink);
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+.footer-logo span {
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+
+footer p {
+    color: var(--gray);
+
+    margin-top: 12px;
+}
+
+
+.copyright {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 70px 5%;
+    }
+
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+
+    .navbar nav {
+        gap: 10px;
+    }
+
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+
+    .hero h1 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    .customizer,
+    .order-wrapper {
+        padding: 22px;
+    }
+
+
+    .cake-grid,
+    .treats-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

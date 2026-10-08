@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catie Cake Parlour | Fresh Cakes & Treats</title>
+
+    <meta
+        name="description"
+        content="Catie Cake Parlour - Fresh cakes, cupcakes, mandazi, samosa boxes and custom cakes."
+    >
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- EMAILJS - ONLY ADDED FOR ORDER EMAILS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <!-- BACKGROUND BRANDING -->
+    <div class="watermark">CATIE</div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="logo">
+            <span>CATIE</span>
+            <small>CAKE PARLOUR</small>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#frosting">Frosting</a>
+            <a href="#customize">Customize</a>
+            <a href="#order">Order</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">WELCOME TO</p>
+
+            <h1>
+                Catie Cake
+                <span>Parlour</span>
+            </h1>
+
+            <p class="hero-text">
+                Freshly baked cakes, delicious treats and beautiful creations
+                made specially for you.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn">View Menu</a>
+                <a href="#order" class="btn btn-outline">Order Now</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="section about">
+
+        <div class="section-heading">
+            <p class="eyebrow">ABOUT US</p>
+            <h2>Made With Love</h2>
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                At <strong>Catie Cake Parlour</strong>, we believe every
+                celebration deserves something sweet.
+            </p>
+
+            <p>
+                From birthdays and weddings to simple moments with family
+                and friends, we make fresh and delicious treats to make
+                every occasion special.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CAKE MENU -->
+    <section id="menu" class="section">
+
+        <div class="section-heading">
+            <p class="eyebrow">OUR MENU</p>
+            <h2>Fresh Cakes</h2>
+            <p>
+                Choose your favourite cake and size.
+            </p>
+        </div>
+
+        <div id="cake-menu" class="cake-grid"></div>
+
+    </section>
+
+
+    <!-- FROSTING -->
+    <section id="frosting" class="section frosting-section">
+
+        <div class="section-heading">
+            <p class="eyebrow">MAKE IT YOURS</p>
+            <h2>Frosting Options</h2>
+            <p>Choose your favourite frosting for your cake.</p>
+        </div>
+
+        <div class="frosting-grid">
+
+            <div class="frosting-card">
+                <span>🍫</span>
+                <h3>Chocolate Cream</h3>
+            </div>
+
+            <div class="frosting-card">
+                <span>🤍</span>
+                <h3>Vanilla</h3>
+            </div>
+
+            <div class="frosting-card">
+                <span>🍓</span>
+                <h3>Strawberry</h3>
+            </div>
+
+            <div class="frosting-card">
+                <span>🍋</span>
+                <h3>Lemon</h3>
+            </div>
+
+            <div class="frosting-card">
+                <span>🌿</span>
+                <h3>Mint</h3>
+            </div>
+
+            <div class="frosting-card">
+                <span>🥜</span>
+                <h3>Peanut Butter</h3>
+            </div>
+
+            <div class="frosting-card">
+                <span>🧀</span>
+                <h3>Cream Cheese</h3>
+            </div>
+
+            <div class="frosting-card">
+                <span>✨</span>
+                <h3>White Frosting</h3>
+            </div>
+
+        </div>
+
+        <div class="extra-price">
+            Extra frosting: <strong>KSh 400</strong>
+        </div>
+
+    </section>
+
+
+    <!-- OTHER TREATS -->
+    <section id="treats" class="section">
+
+        <div class="section-heading">
+            <p class="eyebrow">MORE TREATS</p>
+            <h2>Other Delicious Treats</h2>
+        </div>
+
+        <div class="treats-grid">
+
+            <div class="treat-card">
+
+                <div class="treat-icon">🍰</div>
+
+                <h3>Cake Slices</h3>
+
+                <p>
+                    Fresh individual slices of our delicious cakes.
+                </p>
+
+                <strong>KSh 200</strong>
+
+            </div>
+
+
+            <div class="treat-card">
+
+                <div class="treat-icon">🧁</div>
+
+                <h3>Cupcakes</h3>
+
+                <p>
+                    Soft, fresh and beautifully decorated cupcakes.
+                </p>
+
+                <strong>KSh 200</strong>
+
+            </div>
+
+
+            <!-- SMALL COMBO -->
+            <div class="treat-card orderable-card">
+
+                <div class="treat-icon">🥟</div>
+
+                <h3>Small Combo Box</h3>
+
+                <p>
+                    Mandazi & Samosa combo box.
+                </p>
+
+                <strong>KSh 400</strong>
+
+                <label for="smallBoxQty">
+                    Quantity
+                </label>
+
+                <select id="smallBoxQty">
+                    <option value="1">1 Box</option>
+                    <option value="2">2 Boxes</option>
+                    <option value="3">3 Boxes</option>
+                    <option value="4">4 Boxes</option>
+                    <option value="5">5 Boxes</option>
+                    <option value="10">10 Boxes</option>
+                </select>
+
+                <button
+                    type="button"
+                    class="btn"
+                    onclick="orderCombo('Small Combo Box', 400, 'smallBoxQty')"
+                >
+                    Order Now
+                </button>
+
+            </div>
+
+
+            <!-- LARGE COMBO -->
+            <div class="treat-card orderable-card">
+
+                <div class="treat-icon">🥟</div>
+
+                <h3>Large Combo Box</h3>
+
+                <p>
+                    Mandazi & Samosa combo box.
+                </p>
+
+                <strong>KSh 1,000</strong>
+
+                <label for="largeBoxQty">
+                    Quantity
+                </label>
+
+                <select id="largeBoxQty">
+                    <option value="1">1 Box</option>
+                    <option value="2">2 Boxes</option>
+                    <option value="3">3 Boxes</option>
+                    <option value="4">4 Boxes</option>
+                    <option value="5">5 Boxes</option>
+                    <option value="10">10 Boxes</option>
+                </select>
+
+                <button
+                    type="button"
+                    class="btn"
+                    onclick="orderCombo('Large Combo Box', 1000, 'largeBoxQty')"
+                >
+                    Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CAKE CUSTOMIZER -->
+    <section id="customize" class="section customize-section">
+
+        <div class="section-heading">
+            <p class="eyebrow">CUSTOMIZE</p>
+            <h2>Create Your Cake</h2>
+            <p>
+                Select your cake, size and frosting to calculate the price.
+            </p>
+        </div>
+
+
+        <div class="customizer">
+
+            <div class="form-group">
+
+                <label for="cakeFlavour">
+                    Cake Flavour
+                </label>
+
+                <select id="cakeFlavour">
+                    <option value="">
+                        Select cake flavour
+                    </option>
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="cakeSize">
+                    Cake Size
+                </label>
+
+                <select id="cakeSize">
+
+                    <option value="">
+                        Select size
+                    </option>
+
+                    <option value="0.5">
+                        0.5 Kg
+                    </option>
+
+                    <option value="1">
+                        1 Kg
+                    </option>
+
+                    <option value="2">
+                        2 Kg
+                    </option>
+
+                    <option value="3">
+                        3 Kg
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="frosting">
+                    Frosting
+                </label>
+
+                <select id="frosting">
+
+                    <option value="0">
+                        Standard Frosting — Included
+                    </option>
+
+                    <option value="400">
+                        Extra Frosting — +KSh 400
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="btn calculate-btn"
+                onclick="calculateCake()"
+            >
+                Calculate Price
+            </button>
+
+
+            <div
+                id="priceResult"
+                class="price-result"
+            ></div>
+
+
+            <button
+                type="button"
+                id="addCakeToOrderBtn"
+                class="btn btn-outline"
+                onclick="addCakeToOrder()"
+                style="display:none;"
+            >
+                Add Cake To Order
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ORDER -->
+    <section id="order" class="section order-section">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">PLACE YOUR ORDER</p>
+
+            <h2>Order From Catie</h2>
+
+            <p>
+                Fill in your details and tell us what you'd like.
+            </p>
+
+        </div>
+
+
+        <div class="order-wrapper">
+
+            <form
+                id="orderForm"
+                onsubmit="sendOrder(event)"
+            >
+
+                <div class="form-group">
+
+                    <label for="customerName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="customerPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="customerPhone"
+                        placeholder="07XXXXXXXX"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="orderDetails">
+                        Your Order
+                    </label>
+
+                    <textarea
+                        id="orderDetails"
+                        rows="7"
+                        placeholder="Tell us what you would like to order..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="deliveryDetails">
+                        Delivery / Collection Details
+                    </label>
+
+                    <textarea
+                        id="deliveryDetails"
+                        rows="4"
+                        placeholder="Where should we deliver, or will you collect?"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn submit-btn"
+                    id="submitOrderBtn"
+                >
+                    Place Order
+                </button>
+
+
+                <!-- ORDER STATUS -->
+                <div
+                    id="orderStatus"
+                    class="order-status"
+                ></div>
+
+
+                <!-- CONFIRMATION -->
+                <div
+                    id="orderConfirmation"
+                    class="order-confirmation"
+                >
+
+                    <div class="success-icon">
+                        ✓
+                    </div>
+
+                    <h3>Order Received!</h3>
+
+                    <p>
+                        Thank you for ordering from Catie Cake Parlour.
+                    </p>
+
+                    <p>
+                        Your order has been submitted successfully.
+                    </p>
+
+                    <strong id="orderNumber"></strong>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">CONTACT US</p>
+
+            <h2>Let's Make Something Sweet</h2>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <span>📞</span>
+
+                <h3>Phone</h3>
+
+                <p>
+                    0768 931 447
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <span>📸</span>
+
+                <h3>Instagram</h3>
+
+                <p>
+                    @catiecakeparlourkenya
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <span>💳</span>
+
+                <h3>M-Pesa</h3>
+
+                <p>
+                    Till Number: 515 2157
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            CATIE
+            <span>CAKE PARLOUR</span>
+        </div>
+
+        <p>
+            Fresh cakes. Sweet moments. Made with love.
+        </p>
+
+        <p class="copyright">
+            © 2026 Catie Cake Parlour. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
